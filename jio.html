@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .navbar {
+        /* border: 2px solid black; */
+        height: 72px;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #0f3cc9;
+        position: sticky;
+        top: 0%;
+      }
+      .navbar div {
+        /* border: 2px solid black; */
+      }
+
+      .logo {
+        width: 10%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+      }
+      .logo img {
+        height: 60%;
+      }
+      .options {
+        width: 45%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: auto;
+      }
+      .optItems {
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        /* border: 1px solid black; */
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+      }
+      .search {
+        width: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .searchItems1 {
+        border-radius: 20px;
+        /* border: 2px solid black; */
+        background-color: #0a2885;
+        height: 55%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        padding: 3px;
+      }
+      #searchBar {
+        height: 100%;
+        /* border-radius: 20px; */
+        border: none;
+        background-color: #0a2885;
+        padding-left: 10px;
+        outline: none;
+        color: white;
+        font-weight: bold;
+      }
+
+      #searchBar::placeholder {
+        color: white;
+        font-weight: bold;
+      }
+      .searchItems1 img {
+        height: 100%;
+        border-radius: 20px;
+        margin: 3px;
+      }
+
+      .searchItems {
+        /* border: 1px solid black; */
+        border-radius: 50%;
+      }
+      .searchItems img {
+        /* border: 1px solid black; */
+        border-radius: 50%;
+      }
+      .search div {
+        margin: 5px;
+      }
+
+      /* post Navbar */
+
+      .outerImageContent {
+        font-family: helvetica;
+        /* border: 2px solid black; */
+        height: 415px;
+        background: url("./JPN-HeroBanner_Desktop.jpg");
+        background-size: 100% 100%;
+      }
+      .innerImageContent {
+        height: 100%;
+        margin-left: 80px;
+        /* border: 2px solid black; */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .innerImageContent div {
+        /* border: 2px solid red; */
+        width: 40%;
+      }
+
+      .contChild1 {
+        font-size: 50px;
+        font-weight: 900;
+        color: white;
+      }
+      .contChild2 {
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+      }
+      #b1 {
+        height: 51px;
+        border-radius: 28px;
+        padding: 15px;
+        background-color: #1144e4;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+      }
+      #b2 {
+        height: 51px;
+        border-radius: 28px;
+        padding: 2px;
+        width: 180px;
+        background: none;
+        border: 0.1em solid white;
+        color: white;
+        font-weight: bold;
+        font-size: 17px;
+        font-family: helvetica;
+      }
+
+      .dots {
+        display: flex;
+        justify-content: center;
+      }
+      .dots img {
+        height: 15px;
+        margin: 15px;
+      }
+
+      .iconsOuter {
+        /* margin-top: 13px; */
+        height: 160px;
+      }
+
+      .iconsInner {
+        /* border: 2px solid black; */
+        height: 100%;
+        width: 75%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .iconOpts {
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        align-items: center;
+      }
+
+      .spotlight {
+        /* border: 2px solid black; */
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .spotlight h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 55px;
+        font-weight: 900;
+        /* border: 2px solid red; */
+      }
+      .spotlight p {
+        font-family: Arial, Helvetica, sans-serif;
+        /* font-size: px; */
+        font-weight: bold;
+        color: #b5b5b5;
+        padding: 15px;
+        /* border: 2px solid red; */
+      }
+
+      .cards {
+        /* border: 2px solid black; */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      .x1 {
+        height: 550px;
+        width: 25%;
+        /* border: 2px solid red; */
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .x1 div {
+        height: 50%;
+        /* border: 1px solid black; */
+        border-radius: 20px;
+      }
+
+      .img1 {
+        background: url("./card1.png");
+        background-size: 100% 100%;
+      }
+      .img2 {
+        background: url("./card2.png");
+        background-size: 100% 100%;
+      }
+      .img3 {
+        background: url("./card3.png");
+        background-size: 100% 100%;
+      }
+
+      .content1 {
+        background-color: #0a2885;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 40px;
+      }
+      .content2 {
+        background-color: #0a2885;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 40px;
+      }
+      .content3{
+        background-color: #0a2885;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 40px;
+      }
+      .content1 button {
+        background-color: white;
+        color: #0a2885;
+        width: 105px;
+        height: 30px;
+        border-radius: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+        border: none;
+        font-size: 15px;
+        font-weight: bolder;
+    }
+      .content2 button {
+        background-color: white;
+        color: #0a2885;
+        width: 105px;
+        height: 30px;
+        border-radius: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+        border: none;
+        font-size: 15px;
+        font-weight: bolder;
+    }
+      .content3 button {
+        background-color: white;
+        color: #0a2885;
+        width: 105px;
+        height: 30px;
+        border-radius: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+        border: none;
+        font-size: 15px;
+        font-weight: bolder;
+    }
+    #c1b2{
+          background-color: #1144e4;
+          color: #0a2885;
+          width: 180px;
+          height: 30px;
+          border-radius: 17px;
+          font-family: Arial, Helvetica, sans-serif;
+          border: none;
+          font-size: 15px;
+          font-weight: bolder;
+
+      }
+
+      .guidance{
+        /* border: 2px solid black; */
+        height: 300px;
+        background-color: #0f3cc9;
+        margin: 50px 0px;
+        padding: 20px 0px;
+
+      }
+      .guidance h1{
+        width: 50%;
+        margin: 20px auto;
+        /* margin-top: 30px; */
+        text-align: center;
+        font-size: 55px;
+        font-weight: 900;
+        color: white;
+      }
+
+      .guidance p{
+        width: 50%;
+        margin:20px auto;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 900;
+        color: white;
+      }
+      .footerBtns{
+        width: 50%;
+        /* border: 2px solid black; */
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .guidance button{
+        height: 50px;
+        width: 130px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3px;
+        background: none;
+        color: white;
+        border: 0.1px solid white;
+
+      }
+
+      button img{
+        height: 70%;
+        width: 20%;
+      }
+
+
+
+      /* footer */
+
+      footer{
+        height: 300px;
+        /* border: 2px solid black; */
+        display: flex;
+        justify-content: center;
+      }
+
+      .links{
+        width: 16%;
+        /* border: 1px solid black ; */
+        display: flex;
+        justify-content: center;
+      }
+
+      li{
+        list-style: none;
+        color: gray;
+        font-weight: bold;
+        padding: 10px;
+      }
+      #liHead{
+        color: black;
+        font-size: 15px;
+        font-weight: bolder;
+      }
+
+      #links5{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 30%;
+      }
+      .links5 img{
+        margin: 0px 2px;
+      }
+      #links5 h1{
+        font-size: 25px;
+        font-weight: 900;
+      }
+
+      .end{
+        margin: 10px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .end img{
+        height: 40px;
+      }
+      .first{
+        width: 30%;
+        margin: 1px 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 11px;
+        color: gray;
+        font-weight:bold ;
+      }
+      .last{
+        width: 30%;
+        margin: 1px 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 12px;
+        color: gray;
+        font-weight:bold ;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./1785397.png" alt="" />
+      </div>
+
+      <div class="options">
+        <div class="optItems">Mobile</div>
+        <div class="optItems">Jio Fiber</div>
+        <div class="optItems">Business</div>
+        <div class="optItems">Shop</div>
+        <div class="optItems">Apps</div>
+      </div>
+
+      <div class="search">
+        <div class="searchItems1">
+          <img src="./Captures.PNG" alt="" />
+          <input type="text" id="searchBar" placeholder="Search" />
+        </div>
+        <div class="searchItems"><img src="./Capture2.PNG" alt="" /></div>
+        <div class="searchItems"><img src="./Capturecart.PNG" alt="" /></div>
+        <div class="searchItems"><img src="./Capture4.PNG" alt="" /></div>
+      </div>
+    </nav>
+    <div class="outerImageContent">
+      <div class="innerImageContent">
+        <div class="contChild1">Digital life for every Indian</div>
+        <div class="contChild2">
+          High-speed connectivity, digital delights, and many priceless moments.
+        </div>
+        <div class="contChild3">
+          <button id="b1">Get JioFiber</button>
+          <button id="b2">Surprise Inside</button>
+        </div>
+      </div>
+    </div>
+    <div class="dots">
+      <img src="./Capture.PNG" alt="" />
+    </div>
+
+    <div class="iconsOuter">
+      <div class="iconsInner">
+        <div class="iconOpts"><img src="./recharge.PNG" alt="" /> Recharge</div>
+        <div class="iconOpts"><img src="./wallet.PNG" alt="" /> Pay Bills</div>
+        <div class="iconOpts">
+          <img src="./getjiosim.PNG" alt="" /> Get Jio Sim
+        </div>
+        <div class="iconOpts"><img src="./wifi.PNG" alt="" /> Get JioFiber</div>
+        <div class="iconOpts">
+          <img src="./portjio.PNG" alt="" />Port to Jio
+        </div>
+        <div class="iconOpts"><img src="./help.PNG" alt="" /> Support</div>
+      </div>
+    </div>
+
+    <div class="spotlight">
+      <h1>In the spotlight</h1>
+      <p>The best deals, new launches, and top-selling products right now.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card1 x1">
+        <div class="cardImage img1"></div>
+        <div class="cardContent content1">
+          <button>Jio Mart</button>
+          <h1 style="color: white; padding: 6px 0px;">Buy groceries on the go</h1>
+          <p style="color: white ; padding: 6px px;">Lowest price, free home delivery</p>
+          <button id="c1b2">Shop at JioMart</button>
+          
+        </div>
+      </div>
+      <div class="card2 x1">
+        <div class="cardImage img2"></div>
+        <div class="cardContent content2">
+          <button>Jio Mart</button>
+          <h1 style="color: white; padding: 6px 0px;">Buy groceries on the go</h1>
+          <p style="color: white ; padding: 6px px;">Lowest price, free home delivery</p>
+          <button id="c1b2">Shop at JioMart</button>
+        </div>
+      </div>
+      <div class="card3 x1">
+        <div class="cardImage img3"></div>
+        <div class="cardContent content3">
+          <button>Jio Mart</button>
+          <h1 style="color: white; padding: 6px 0px;">Buy groceries on the go</h1>
+          <p style="color: white ; padding: 6px px;">Lowest price, free home delivery</p>
+          <button id="c1b2">Shop at JioMart</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="guidance">
+      <h1>Need guidance ?</h1>
+      <p>We'd love to help you</p>
+      <div class="footerBtns">
+         <button><img src="./Capture2.PNG" alt=""> Support</button>
+         <button><img src="./chatwithus.PNG" alt=""> Chat with us</button>
+         <button><img src="./callus.PNG" alt=""> Call us</button>
+         <button><img src="./findstore.PNG" alt=""> Find a Store</button>
+      </div>
+    </div>
+
+    <footer>
+        <div class="links" id="links1">
+          <ul>
+            <li id="liHead">Our offerings</li>
+            <li>Mobile</li>
+            <li>Fiber</li>
+            <li>Business</li>
+            <li>Apps</li>
+            <li>Shop</li>
+          </ul>
+        </div>
+        <div class="links" id="links2">
+          <ul>
+            <li id="liHead">Our offerings</li>
+            <li>Mobile</li>
+            <li>Fiber</li>
+            <li>Business</li>
+            <li>Apps</li>
+            <li>Shop</li>
+          </ul>
+        </div>
+        <div class="links" id="links3">
+          <ul>
+            <li id="liHead">Our offerings</li>
+            <li>Mobile</li>
+            <li>Fiber</li>
+            <li>Business</li>
+            <li>Apps</li>
+            <li>Shop</li>
+          </ul>
+        </div>
+        <div class="links" id="links4">
+          <ul>
+            <li id="liHead">Our offerings</li>
+            <li>Mobile</li>
+            <li>Fiber</li>
+            <li>Business</li>
+            <li>Apps</li>
+            <li>Shop</li>
+          </ul>
+        </div>
+        <div class="links" id="links5">
+          <h1>Connect with us</h1>
+          <div class="footerIcons">
+            <img src="./twitter.PNG" alt=""><img src="./insta.PNG" alt=""><img src="./fb.PNG" alt=""><img src="./yt.PNG" alt=""><img src="./linkedin.PNG" alt="">
+            <h1>Download MyJio</h1>
+            <div class="myjio" style="margin: 10px 0px;">
+              <img src="./AppStore.svg" alt="">
+              <img src="./G-Play.svg" alt="">
+            </div>
+          </div>
+        </div>
+    </footer>
+    <hr color="gray" size="1">
+    <div class="end">
+      <div class="first"><img src="./1785397.png" alt=""> Copyright © 2022 Reliance Jio Infocomm Ltd. All rights reserved.</div>
+      <div class="last">Press release | Regulatory | Policies | Terms & conditions</div>
+    </div>
+  </body>
+</html>
